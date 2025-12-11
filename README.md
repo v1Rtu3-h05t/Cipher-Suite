@@ -24,8 +24,6 @@ A collection of cryptographic tools written in Python, featuring an **elite Caes
 - **ASCII Banner**  
   Stylish terminal intro for a professional look.
 
- ![Example 1](screenshots/vh1.png)
- ![Example 3](screenshots/vh3.png)
 
 ---
 
@@ -53,6 +51,8 @@ python Cipher.py
   [4] Pattern scan (frequency analysis)
   [5] Exit terminal
 ```
+ ![Example 1](screenshots/vh1.png)
+ ![Example 3](screenshots/vh3.png)
 
 ## 🧠 Example
 ```Encrypting with a shift of 3:
