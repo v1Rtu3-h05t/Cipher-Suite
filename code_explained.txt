@@ -1,0 +1,140 @@
+============================================================
+                CIPHER SUITE — EXPLAINED
+============================================================
+
+This file explains how the Phantom Cipher Suite works in simple,
+easy-to-understand language. Think of this as a guide for someone
+who wants to learn cryptography like a young wizard learning magic.
+
+============================================================
+1. BANNER (THE TITLE SCREEN)
+============================================================
+
+The big block of fancy text at the top is called ASCII art.
+It doesn’t do anything in the code — it just makes the terminal
+look cool, like the intro screen of a video game.
+
+============================================================
+2. IMPORTS (BRINGING TOOLS INTO THE TOOLBOX)
+============================================================
+
+import string   → gives us alphabets like abcdefghijklmnopqrstuvwxyz
+import sys      → lets us exit the program safely
+Counter         → counts how many times each letter appears
+
+These are like special tools we borrow from Python.
+
+============================================================
+3. PHANTOMCIPHER CLASS (THE CRYPTO ROBOT)
+============================================================
+
+This class is like a robot that knows how to:
+- shift letters
+- encrypt messages
+- decrypt messages
+- try all 26 possible keys
+- analyze letter patterns
+
+Everything the cipher can do lives inside this robot.
+
+------------------------------------------------------------
+3.1 __init__ (ROBOT MEMORY)
+------------------------------------------------------------
+
+The robot stores two alphabets:
+- lowercase letters
+- uppercase letters
+
+This helps it keep the original letter case when encrypting.
+
+------------------------------------------------------------
+3.2 morph_char (SHIFT ONE LETTER)
+------------------------------------------------------------
+
+This function takes:
+- a single letter
+- a shift amount
+- an alphabet (upper or lower)
+
+It moves the letter forward or backward in the alphabet.
+If the character isn’t a letter (like ! or space), it returns it unchanged.
+
+------------------------------------------------------------
+3.3 execute (ENCRYPT OR DECRYPT A WHOLE MESSAGE)
+------------------------------------------------------------
+
+This is the main engine.
+
+It:
+- flips the shift if decoding
+- loops through every character
+- keeps uppercase uppercase
+- keeps lowercase lowercase
+- leaves symbols alone
+- builds the final encrypted/decrypted message
+
+This is the heart of the cipher.
+
+------------------------------------------------------------
+3.4 ghost_crack (BRUTE FORCE MODE)
+------------------------------------------------------------
+
+This tries all 26 possible shifts and shows every result.
+This is how Caesar ciphers are cracked.
+
+------------------------------------------------------------
+3.5 pattern_scan (FREQUENCY ANALYSIS)
+------------------------------------------------------------
+
+This looks at the message and counts which letters appear the most.
+Cryptanalysts use this to break substitution ciphers.
+
+============================================================
+4. INPUT VALIDATION (THE SECURITY GUARD)
+============================================================
+
+This function makes sure the user types valid input.
+If they type something wrong, it asks again.
+If they press CTRL+C, it exits safely.
+
+This prevents the program from crashing.
+
+============================================================
+5. COMMAND MENU (THE MISSION SELECT SCREEN)
+============================================================
+
+This prints the list of things the user can do:
+1. Encrypt
+2. Decrypt
+3. Brute force crack
+4. Pattern scan
+5. Exit
+
+Just like a video game menu.
+
+============================================================
+6. MAIN TERMINAL LOOP (THE CONTROL CENTER)
+============================================================
+
+This is where everything comes together.
+
+The program:
+- prints the banner
+- creates the PhantomCipher robot
+- shows the menu
+- waits for the user to choose a command
+- performs the chosen operation
+- loops until the user exits
+
+This is the brain of the whole system.
+
+============================================================
+7. SAFE EXIT BLOCK
+============================================================
+
+If the user presses CTRL+C, the program shuts down cleanly
+instead of crashing.
+
+============================================================
+END OF FILE
+============================================================
